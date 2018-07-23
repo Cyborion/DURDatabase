@@ -8,7 +8,7 @@ public class Visualizer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int visualizer_id;
+    private int visualizerId;
 
     @NotNull
     private String model;
@@ -20,7 +20,7 @@ public class Visualizer {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Visualizer() {
@@ -31,12 +31,12 @@ public class Visualizer {
         this.opis = opis;
     }
 
-    public int getVisualizer_id() {
-        return visualizer_id;
+    public int getVisualizerId() {
+        return visualizerId;
     }
 
-    public void setVisualizer_id(int visualizer_id) {
-        this.visualizer_id = visualizer_id;
+    public void setVisualizerId(int visualizerId) {
+        this.visualizerId = visualizerId;
     }
 
     public String getModel() {
@@ -66,7 +66,7 @@ public class Visualizer {
     @Override
     public String toString() {
         return "Visualizer{" +
-                "visualizer_id=" + visualizer_id +
+                "visualizerId=" + visualizerId +
                 ", model='" + model + '\'' +
                 ", opis='" + opis + '\'' +
                 '}';

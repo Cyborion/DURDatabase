@@ -10,15 +10,15 @@ public class Projektor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int projektor_id;
+    private int projektorId;
 
     @NotNull
     private String model;
     @NotNull
-    private String numer_seryjny;
-    private String adres_ip;
-    private String adres_mac;
-    private String wersja_oprogr;
+    private String numerSeryjny;
+    private String adresIp;
+    private String adresMac;
+    private String wersjaOprogr;
     private String opis;
 
     @ManyToOne(fetch = FetchType.LAZY,
@@ -27,7 +27,7 @@ public class Projektor {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id")
+    @JoinColumn(name = "salaId")
     private Sala sala;
 
     @OneToMany(mappedBy = "projektor",
@@ -53,23 +53,23 @@ public class Projektor {
     public Projektor() {
     }
 
-    public Projektor(String model, String numer_seryjny, String adres_ip, String adres_mac, String wersja_oprogr, String opis) {
+    public Projektor(String model, String numerSeryjny, String adresIp, String adresMac, String wersjaOprogr, String opis) {
         this.model = model;
-        this.numer_seryjny = numer_seryjny;
-        this.adres_ip = adres_ip;
-        this.adres_mac = adres_mac;
-        this.wersja_oprogr = wersja_oprogr;
+        this.numerSeryjny = numerSeryjny;
+        this.adresIp = adresIp;
+        this.adresMac = adresMac;
+        this.wersjaOprogr = wersjaOprogr;
         this.opis = opis;
     }
 
     // getter & setter
 
-    public int getProjektor_id() {
-        return projektor_id;
+    public int getProjektorId() {
+        return projektorId;
     }
 
-    public void setProjektor_id(int projektor_id) {
-        this.projektor_id = projektor_id;
+    public void setProjektorId(int projektorId) {
+        this.projektorId = projektorId;
     }
 
     public String getModel() {
@@ -80,36 +80,36 @@ public class Projektor {
         this.model = model;
     }
 
-    public String getNumer_seryjny() {
-        return numer_seryjny;
+    public String getNumerSeryjny() {
+        return numerSeryjny;
     }
 
-    public void setNumer_seryjny(String numer_seryjny) {
-        this.numer_seryjny = numer_seryjny;
+    public void setNumerSeryjny(String numerSeryjny) {
+        this.numerSeryjny = numerSeryjny;
     }
 
-    public String getAdres_ip() {
-        return adres_ip;
+    public String getAdresIp() {
+        return adresIp;
     }
 
-    public void setAdres_ip(String adres_ip) {
-        this.adres_ip = adres_ip;
+    public void setAdresIp(String adresIp) {
+        this.adresIp = adresIp;
     }
 
-    public String getAdres_mac() {
-        return adres_mac;
+    public String getAdresMac() {
+        return adresMac;
     }
 
-    public void setAdres_mac(String adres_mac) {
-        this.adres_mac = adres_mac;
+    public void setAdresMac(String adresMac) {
+        this.adresMac = adresMac;
     }
 
-    public String getWersja_oprogr() {
-        return wersja_oprogr;
+    public String getWersjaOprogr() {
+        return wersjaOprogr;
     }
 
-    public void setWersja_oprogr(String wersja_oprogr) {
-        this.wersja_oprogr = wersja_oprogr;
+    public void setWersjaOprogr(String wersjaOprogr) {
+        this.wersjaOprogr = wersjaOprogr;
     }
 
     public String getOpis() {
@@ -139,12 +139,12 @@ public class Projektor {
     @Override
     public String toString() {
         return "Projektor{" +
-                "projektor_id=" + projektor_id +
+                "projektorId=" + projektorId +
                 ", model='" + model + '\'' +
-                ", numer_seryjny='" + numer_seryjny + '\'' +
-                ", adres_ip='" + adres_ip + '\'' +
-                ", adres_mac='" + adres_mac + '\'' +
-                ", wersja_oprogr='" + wersja_oprogr + '\'' +
+                ", numerSeryjny='" + numerSeryjny + '\'' +
+                ", adresIp='" + adresIp + '\'' +
+                ", adresMac='" + adresMac + '\'' +
+                ", wersjaOprogr='" + wersjaOprogr + '\'' +
                 ", opis='" + opis + '\'' +
                 '}';
     }

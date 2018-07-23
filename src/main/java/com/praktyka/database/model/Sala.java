@@ -10,7 +10,7 @@ public class Sala {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int sala_id;
+    private int salaId;
 
     @NotNull
     private int numer;
@@ -182,12 +182,12 @@ public class Sala {
 
     // getter & setter
 
-    public int getSala_id() {
-        return sala_id;
+    public int getSalaId() {
+        return salaId;
     }
 
-    public void setSala_id(int sala_id) {
-        this.sala_id = sala_id;
+    public void setSalaId(int salaId) {
+        this.salaId = salaId;
     }
 
     public int getNumer() {
@@ -297,7 +297,7 @@ public class Sala {
     @Override
     public String toString() {
         return "Sala{" +
-                "sala_id=" + sala_id +
+                "salaId=" + salaId +
                 ", numer=" + numer +
                 ", budynek=" + budynek +
                 ", opis='" + opis + '\'' +

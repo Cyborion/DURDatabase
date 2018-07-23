@@ -8,7 +8,7 @@ public class Ekran {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ekran_id;
+    private int ekranId;
 
     @NotNull
     private String model;
@@ -22,7 +22,7 @@ public class Ekran {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Ekran() {
@@ -35,12 +35,12 @@ public class Ekran {
         this.opis = opis;
     }
 
-    public int getEkran_id() {
-        return ekran_id;
+    public int getEkranId() {
+        return ekranId;
     }
 
-    public void setEkran_id(int ekran_id) {
-        this.ekran_id = ekran_id;
+    public void setEkranId(int ekranId) {
+        this.ekranId = ekranId;
     }
 
     public String getModel() {
@@ -86,7 +86,7 @@ public class Ekran {
     @Override
     public String toString() {
         return "Ekran{" +
-                "ekran_id=" + ekran_id +
+                "ekranId=" + ekranId +
                 ", model='" + model + '\'' +
                 ", wymiary='" + wymiary + '\'' +
                 ", sterowanie='" + sterowanie + '\'' +

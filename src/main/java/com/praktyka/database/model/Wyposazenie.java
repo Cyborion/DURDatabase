@@ -7,7 +7,7 @@ public class Wyposazenie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int wyposazenie_id;
+    private int wyposazenieId;
 
     private String rolety;
     private String oswietlenie;
@@ -17,7 +17,7 @@ public class Wyposazenie {
 
     @OneToOne(fetch = FetchType.LAZY,
             optional = false)
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Wyposazenie() {
@@ -31,12 +31,12 @@ public class Wyposazenie {
         this.opis = opis;
     }
 
-    public int getWyposazenie_id() {
-        return wyposazenie_id;
+    public int getWyposazenieId() {
+        return wyposazenieId;
     }
 
-    public void setWyposazenie_id(int wyposazenie_id) {
-        this.wyposazenie_id = wyposazenie_id;
+    public void setWyposazenieId(int wyposazenieId) {
+        this.wyposazenieId = wyposazenieId;
     }
 
     public String getRolety() {
@@ -90,7 +90,7 @@ public class Wyposazenie {
     @Override
     public String toString() {
         return "Wyposazenie{" +
-                "wyposazenie_id=" + wyposazenie_id +
+                "wyposazenieId=" + wyposazenieId +
                 ", rolety='" + rolety + '\'' +
                 ", oswietlenie='" + oswietlenie + '\'' +
                 ", pilot='" + pilot + '\'' +

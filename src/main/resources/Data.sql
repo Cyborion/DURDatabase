@@ -1,4 +1,4 @@
--- uwaga bo wyjebie sie jak np. przypisze przylacze do nieistniejacej sali np. przylacze(sala_id = 8), a nie ma sali o takim id
+-- uwaga bo wyjebie sie jak np. przypisze przylacze do nieistniejacej sali np. przylacze(salaId = 8), a nie ma sali o takim id
 -- do sprawdzenia
 
 insert into sala (numer, budynek) values (63,'A');
@@ -24,6 +24,7 @@ insert into audio (sala_id,typ, opis) values ( 2, 'typikal','opis');
 insert into audio (sala_id,typ, opis) values ( 2, 'malware','no');
 insert into audio (sala_id,typ, opis) values ( 1, 'typ',NULL);
 insert into audio (sala_id,typ, opis) values ( 5, 'mikrofon','aha');
+insert into audio (sala_id,typ, opis) values ( 1, 'mikrofony','bach');
 
 insert into automatyka (sala_id, nazwa, opis) values ( 1, 'szafa1','szafa');
 insert into automatyka (sala_id, nazwa, opis) values ( 1, 'szafa2',NULL);

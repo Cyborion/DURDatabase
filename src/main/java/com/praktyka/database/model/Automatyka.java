@@ -8,7 +8,7 @@ public class Automatyka {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int automatyka_id;
+    private int automatykaId;
 
     @NotNull
     private String nazwa;
@@ -20,7 +20,7 @@ public class Automatyka {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Automatyka() {
@@ -32,12 +32,12 @@ public class Automatyka {
         this.sala = sala;
     }
 
-    public int getAutomatyka_id() {
-        return automatyka_id;
+    public int getAutomatykaId() {
+        return automatykaId;
     }
 
-    public void setAutomatyka_id(int automatyka_id) {
-        this.automatyka_id = automatyka_id;
+    public void setAutomatykaId(int automatykaId) {
+        this.automatykaId = automatykaId;
     }
 
     public String getNazwa() {
@@ -67,7 +67,7 @@ public class Automatyka {
     @Override
     public String toString() {
         return "Automatyka{" +
-                "automatyka_id=" + automatyka_id +
+                "automatykaId=" + automatykaId +
                 ", nazwa='" + nazwa + '\'' +
                 ", opis='" + opis + '\'' +
                 '}';

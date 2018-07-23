@@ -9,12 +9,12 @@ public class Lampa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int lampa_id;
+    private int lampaId;
 
     @NotNull
-    private int czas_pracy;
+    private int czasPracy;
     @NotNull
-    private Date data_kontroli;
+    private Date dataKontroli;
     @NotNull
     private boolean sprawna;
     private String opis;
@@ -25,40 +25,40 @@ public class Lampa {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "projektor_id")
+    @JoinColumn(name = "projektorId")
     private Projektor projektor;
 
     public Lampa() {
     }
 
-    public Lampa(Date data_kontroli, boolean sprawna, String opis) {
-        this.data_kontroli = data_kontroli;
+    public Lampa(Date dataKontroli, boolean sprawna, String opis) {
+        this.dataKontroli = dataKontroli;
         this.sprawna = sprawna;
         this.opis = opis;
     }
 
-    public int getLampa_id() {
-        return lampa_id;
+    public int getLampaId() {
+        return lampaId;
     }
 
-    public void setLampa_id(int lampa_id) {
-        this.lampa_id = lampa_id;
+    public void setLampaId(int lampaId) {
+        this.lampaId = lampaId;
     }
 
-    public int getCzas_pracy() {
-        return czas_pracy;
+    public int getCzasPracy() {
+        return czasPracy;
     }
 
-    public void setCzas_pracy(int czas_pracy) {
-        this.czas_pracy = czas_pracy;
+    public void setCzasPracy(int czasPracy) {
+        this.czasPracy = czasPracy;
     }
 
-    public Date getData_kontroli() {
-        return data_kontroli;
+    public Date getDataKontroli() {
+        return dataKontroli;
     }
 
-    public void setData_kontroli(Date data_kontroli) {
-        this.data_kontroli = data_kontroli;
+    public void setDataKontroli(Date dataKontroli) {
+        this.dataKontroli = dataKontroli;
     }
 
     public boolean isSprawna() {
@@ -88,9 +88,9 @@ public class Lampa {
     @Override
     public String toString() {
         return "Lampa{" +
-                "lampa_id=" + lampa_id +
-                ", czas_pracy=" + czas_pracy +
-                ", data_kontroli=" + data_kontroli +
+                "lampaId=" + lampaId +
+                ", czasPracy=" + czasPracy +
+                ", dataKontroli=" + dataKontroli +
                 ", sprawna=" + sprawna +
                 ", opis='" + opis + '\'' +
                 '}';

@@ -8,7 +8,7 @@ public class Zlacze {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int zlacze_id;
+    private int zlaczeId;
 
     @NotNull
     private String nazwa;
@@ -21,7 +21,7 @@ public class Zlacze {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Zlacze() {
@@ -33,12 +33,12 @@ public class Zlacze {
         this.opis = opis;
     }
 
-    public int getZlacze_id() {
-        return zlacze_id;
+    public int getZlaczeId() {
+        return zlaczeId;
     }
 
-    public void setZlacze_id(int zlacze_id) {
-        this.zlacze_id = zlacze_id;
+    public void setZlaczeId(int zlaczeId) {
+        this.zlaczeId = zlaczeId;
     }
 
     public String getNazwa() {
@@ -76,7 +76,7 @@ public class Zlacze {
     @Override
     public String toString() {
         return "Zlacze{" +
-                "zlacze_id=" + zlacze_id +
+                "zlaczeId=" + zlaczeId +
                 ", nazwa='" + nazwa + '\'' +
                 ", dlugosc=" + dlugosc +
                 ", opis='" + opis + '\'' +
