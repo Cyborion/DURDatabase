@@ -15,7 +15,7 @@ public class Sala {
     @NotNull
     private int numer;
     @NotNull
-    private char budynek;
+    private String budynek;
     private String opis;
 
     @OneToOne(fetch = FetchType.LAZY,
@@ -175,12 +175,13 @@ public class Sala {
     public Sala() {
     }
 
-    public Sala(char budynek, String opis) {
+    public Sala(int numer, String budynek, String opis) {
+        this.numer = numer;
         this.budynek = budynek;
         this.opis = opis;
     }
 
-    // getter & setter
+// getter & setter
 
     public int getSalaId() {
         return salaId;
@@ -198,11 +199,11 @@ public class Sala {
         this.numer = numer;
     }
 
-    public char getBudynek() {
+    public String getBudynek() {
         return budynek;
     }
 
-    public void setBudynek(char budynek) {
+    public void setBudynek(String budynek) {
         this.budynek = budynek;
     }
 
