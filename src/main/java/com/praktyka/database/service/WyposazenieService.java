@@ -22,7 +22,7 @@ public class WyposazenieService {
 
     public List <Wyposazenie> findAll(){return wyposazenieRepository.findAll();}
 
-    public Wyposazenie findBySalaId(int salaId){return wyposazenieRepository.findAllBySala(salaRepository.getOne(salaId));}
+    public Wyposazenie findBySalaId(int salaId){return wyposazenieRepository.findBySala(salaRepository.getOne(salaId));}
 
     @Transactional
     public void addWyposazenie(Wyposazenie wyposazenie){

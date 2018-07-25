@@ -54,17 +54,17 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Numer Sali</th>
                     <th>Budynek</th>
+                    <th>Numer Sali</th>
                     <th>Opis</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="sala : ${sale}">
-                    <td th:text="${sala.numer}">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                <tr th:each="sala : ${salaList}">
+                    <td th:text="${sala.salaId}"></td>
+                    <td th:text="${sala.budynek}"></td>
+                    <td th:text="${sala.numer}"></td>
+                    <td th:text="${sala.opis}"></td>
                 </tr>
                 <tr>
                     <td>2</td>

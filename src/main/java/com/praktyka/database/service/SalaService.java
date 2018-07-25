@@ -22,6 +22,8 @@ public class SalaService {
         return salaRepository.findAllByBudynek(budynek);
     }
 
+    public Sala findByBudynekAndNumer(String budynek, int numer){return salaRepository.findByBudynekAndNumer(budynek, numer);}
+
     public Sala findById(int salaId){
         return salaRepository.getOne(salaId);
     }
