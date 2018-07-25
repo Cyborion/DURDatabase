@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface AutomatykaRepository extends JpaRepository <Automatyka, Integer> {
     List<Automatyka> findAllByNazwa(String nazwa);
-    List<AutomatykaRepository> findAllBySala(Sala sala);
+    List<Automatyka> findAllBySala(Sala sala);
 }
