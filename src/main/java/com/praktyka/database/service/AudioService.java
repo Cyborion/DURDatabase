@@ -5,6 +5,7 @@ import com.praktyka.database.repository.AudioRepository;
 import com.praktyka.database.repository.SalaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,4 +33,8 @@ public class AudioService {
         return audioRepository.findAllBySala(salaRepository.getOne(salaId));
     }
 
+    @Transactional
+    public void addAudio(Audio audio) {
+        audioRepository.save(audio);
+    }
 }

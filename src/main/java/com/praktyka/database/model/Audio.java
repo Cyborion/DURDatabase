@@ -10,7 +10,7 @@ public class Audio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int audioId;
 
-    @NotNull
+ //   @NotNull
     private String typ;
     private String opis;
 
@@ -20,16 +20,18 @@ public class Audio {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "salaId", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false, updatable = false, insertable = true)
     private Sala sala;
 
     public Audio() {
     }
 
     public Audio(String typ, String opis) {
+        super();
         this.typ = typ;
         this.opis = opis;
     }
+
 
     public int getAudioId() {
         return audioId;
