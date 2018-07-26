@@ -10,7 +10,7 @@ public class Audio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int audioId;
 
- //   @NotNull
+    @NotNull
     private String typ;
     private String opis;
 
