@@ -9,10 +9,10 @@ public class Naprawa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int naprawa_id;
+    private int naprawaId;
 
     @NotNull
-    private Date data_naprawy;
+    private Date dataNaprawy;
     private String opis;
 
     @ManyToOne(fetch = FetchType.LAZY,
@@ -21,31 +21,31 @@ public class Naprawa {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Naprawa() {
     }
 
-    public Naprawa(Date data_naprawy, String opis) {
-        this.data_naprawy = data_naprawy;
+    public Naprawa(Date dataNaprawy, String opis) {
+        this.dataNaprawy = dataNaprawy;
         this.opis = opis;
     }
 
-    public int getNaprawa_id() {
-        return naprawa_id;
+    public int getNaprawaId() {
+        return naprawaId;
     }
 
-    public void setNaprawa_id(int naprawa_id) {
-        this.naprawa_id = naprawa_id;
+    public void setNaprawaId(int naprawaId) {
+        this.naprawaId = naprawaId;
     }
 
-    public Date getData_naprawy() {
-        return data_naprawy;
+    public Date getDataNaprawy() {
+        return dataNaprawy;
     }
 
-    public void setData_naprawy(Date data_naprawy) {
-        this.data_naprawy = data_naprawy;
+    public void setDataNaprawy(Date dataNaprawy) {
+        this.dataNaprawy = dataNaprawy;
     }
 
     public String getOpis() {
@@ -67,8 +67,8 @@ public class Naprawa {
     @Override
     public String toString() {
         return "Naprawa{" +
-                "naprawa_id=" + naprawa_id +
-                ", data_naprawy=" + data_naprawy +
+                "naprawaId=" + naprawaId +
+                ", dataNaprawy=" + dataNaprawy +
                 ", opis='" + opis + '\'' +
                 '}';
     }

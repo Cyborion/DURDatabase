@@ -8,7 +8,7 @@ public class Tablica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int tablica_id;
+    private int tablicaId;
 
     @NotNull
     private String model;
@@ -21,7 +21,7 @@ public class Tablica {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "sala_id", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false)
     private Sala sala;
 
     public Tablica() {
@@ -33,12 +33,12 @@ public class Tablica {
         this.opis = opis;
     }
 
-    public int getTablica_id() {
-        return tablica_id;
+    public int getTablicaId() {
+        return tablicaId;
     }
 
-    public void setTablica_id(int tablica_id) {
-        this.tablica_id = tablica_id;
+    public void setTablicaId(int tablicaId) {
+        this.tablicaId = tablicaId;
     }
 
     public String getModel() {
@@ -76,7 +76,7 @@ public class Tablica {
     @Override
     public String toString() {
         return "Tablica{" +
-                "tablica_id=" + tablica_id +
+                "tablicaId=" + tablicaId +
                 ", model='" + model + '\'' +
                 ", wymiary='" + wymiary + '\'' +
                 ", opis='" + opis + '\'' +
