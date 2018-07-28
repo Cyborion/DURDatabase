@@ -31,4 +31,8 @@ public class ProjektorService {
 
     @Transactional
     public void addProjektor (Projektor projektor){ projektorRepository.save(projektor);}
+
+    public void deleteProjektor(Projektor projektor){
+        projektorRepository.delete(projektor);
+    }
 }

@@ -37,4 +37,9 @@ public class AudioService {
     public void addAudio(Audio audio) {
         audioRepository.save(audio);
     }
+
+    public void deleteAudio(Audio audio){
+        audioRepository.delete(audio);
+    }
+
 }

@@ -42,4 +42,8 @@ public class LampaService {
     @Transactional
     public void addLampa(Lampa lampa){lampaRepository.save(lampa);}
 
+    public void deleteLampa(Lampa lampa){
+        lampaRepository.delete(lampa);
+    }
+
 }

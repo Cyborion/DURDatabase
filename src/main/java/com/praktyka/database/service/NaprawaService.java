@@ -34,4 +34,8 @@ public class NaprawaService {
 
     @Transactional
     public void addNaprawa (Naprawa naprawa){ naprawaRepository.save(naprawa);}
+
+    public void deleteNaprawa(Naprawa naprawa){
+        naprawaRepository.delete(naprawa);
+    }
 }

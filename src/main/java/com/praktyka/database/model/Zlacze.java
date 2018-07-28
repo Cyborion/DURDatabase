@@ -21,7 +21,7 @@ public class Zlacze {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "salaId", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false, updatable = false, insertable = true)
     private Sala sala;
 
     public Zlacze() {

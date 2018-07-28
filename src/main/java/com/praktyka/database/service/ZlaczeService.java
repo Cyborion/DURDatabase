@@ -31,4 +31,8 @@ public class ZlaczeService {
     public void addZlacze(Zlacze zlacze){
         zlaczeRepository.save(zlacze);
     }
+
+    public void deleteZlacze(Zlacze zlacze){
+        zlaczeRepository.delete(zlacze);
+    }
 }

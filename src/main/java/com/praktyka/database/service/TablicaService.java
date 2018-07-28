@@ -31,4 +31,8 @@ public class TablicaService {
         tablicaRepository.save(tablica);
     }
 
+    public void deleteTablica(Tablica tablica){
+        tablicaRepository.delete(tablica);
+    }
+
 }

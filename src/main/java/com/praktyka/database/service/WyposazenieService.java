@@ -28,4 +28,8 @@ public class WyposazenieService {
     public void addWyposazenie(Wyposazenie wyposazenie){
         wyposazenieRepository.save(wyposazenie);
     }
+
+    public void deleteWyposazenia(Wyposazenie wyposazenie){
+        wyposazenieRepository.delete(wyposazenie);
+    }
 }

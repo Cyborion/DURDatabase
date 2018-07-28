@@ -33,4 +33,8 @@ public class SalaService {
         salaRepository.save(sala);
     }
 
+    public void deleteSala(Sala sala){
+        salaRepository.delete(sala);
+    }
+
 }

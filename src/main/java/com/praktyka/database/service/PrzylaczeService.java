@@ -32,4 +32,8 @@ public class PrzylaczeService {
     public void addPrzylacze(Przylacze przylacze) {
         przylaczeRepository.save(przylacze);
     }
+
+    public void deletePrzylacze(Przylacze przylacze){
+        przylaczeRepository.delete(przylacze);
+    }
 }

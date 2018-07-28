@@ -17,7 +17,7 @@ public class Wyposazenie {
 
     @OneToOne(fetch = FetchType.LAZY,
             optional = false)
-    @JoinColumn(name = "salaId", nullable = false)
+    @JoinColumn(name = "salaId", nullable = false, updatable = false, insertable = true)
     private Sala sala;
 
     public Wyposazenie() {

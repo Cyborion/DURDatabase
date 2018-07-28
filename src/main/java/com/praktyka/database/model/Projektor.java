@@ -27,7 +27,7 @@ public class Projektor {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "salaId")
+    @JoinColumn(name = "salaId", nullable = false, updatable = false, insertable = true)
     private Sala sala;
 
     @OneToMany(mappedBy = "projektor",

@@ -33,4 +33,8 @@ public class EkranService {
     public void addEkran (Ekran ekran){
         ekranRepository.save(ekran);
     }
+
+    public void deleteEkran(Ekran ekran){
+        ekranRepository.delete(ekran);
+    }
 }

@@ -27,8 +27,12 @@ public class VisualizerService{
     public List <Visualizer> findAllByModel(String model){return visualizerRepository.findAllByModel(model);}
 
     @Transactional
-    public void addTablica(Visualizer visualizer){
+    public void addVisualizer(Visualizer visualizer){
         visualizerRepository.save(visualizer);
+    }
+
+    public void deleteVisualizer(Visualizer visualizer){
+        visualizerRepository.delete(visualizer);
     }
 
 }

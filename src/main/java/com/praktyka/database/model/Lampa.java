@@ -25,7 +25,7 @@ public class Lampa {
                     CascadeType.MERGE,
                     CascadeType.PERSIST,
                     CascadeType.REFRESH})
-    @JoinColumn(name = "projektorId")
+    @JoinColumn(name = "projektorId", nullable = false, updatable = false, insertable = true)
     private Projektor projektor;
 
     public Lampa() {

@@ -29,4 +29,8 @@ public class AutomatykaService {
     public void addAutomatyka(Automatyka automatyka){
         automatykaRepository.save(automatyka);
     }
+
+    public void deleteAutomatyka(Automatyka automatyka){
+        automatykaRepository.delete(automatyka);
+    }
 }
